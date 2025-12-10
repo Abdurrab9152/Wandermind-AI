@@ -3,7 +3,7 @@
 interface Props {
   itinerary: string;
   isLoading: boolean;
-  className?: string; // ✅ added optional className
+  className?: string; 
 }
 
 export default function ItineraryPreview({ itinerary, isLoading, className }: Props) {

@@ -18,16 +18,12 @@ export default function InteractiveHome() {
 
   useEffect(() => {
     setMounted(true);
-
-    // Typewriter effect
     let i = 0;
     const interval = setInterval(() => {
       setTypedText(fullText.slice(0, i + 1));
       i++;
       if (i === fullText.length) clearInterval(interval);
     }, 100);
-
-    // Generate particle positions only on client
     const positions = [...Array(10)].map(() => ({
       top: Math.random() * 100,
       left: Math.random() * 100,
@@ -50,7 +46,7 @@ export default function InteractiveHome() {
           }}
         />
 
-        {/* Floating particles */}
+        {}
         {mounted && (
           <motion.div
             className="absolute w-full h-full"
@@ -115,7 +111,7 @@ export default function InteractiveHome() {
         )}
       </section>
 
-      {/* Country Cards Section */}
+      {}
       <section className="relative z-10 w-full px-6 md:px-12 py-16">
         <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-10">
           Popular Destinations

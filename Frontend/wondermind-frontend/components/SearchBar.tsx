@@ -18,8 +18,6 @@ export default function SearchBar({
 }: SearchBarProps) {
   
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
-
-  // Load recent searches safely
   useEffect(() => {
     try {
       const stored = JSON.parse(localStorage.getItem("recentSearches") || "[]");
@@ -30,10 +28,8 @@ export default function SearchBar({
       setRecentSearches([]);
     }
   }, []);
-
-  // SEARCH FUNCTION
   const handleSearch = async () => {
-    const query = String(currentQuery ?? "").trim();   // 🔥 ALWAYS STRING
+    const query = String(currentQuery ?? "").trim();   
 
     if (!query) {
       alert("Please enter a destination.");
@@ -51,8 +47,6 @@ export default function SearchBar({
     } catch {
       setItineraryText("Something went wrong. Please try again.");
     }
-
-    // Save recent searches
     const updated = [
       query,
       ...recentSearches.filter((s) => String(s) !== query),
@@ -71,11 +65,11 @@ export default function SearchBar({
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
 
-      {/* INPUT + BUTTON */}
+      {}
       <div className="flex gap-3">
 
         <input
-          value={String(currentQuery ?? "")}  // 🔥 FIXES YOUR ERROR
+          value={String(currentQuery ?? "")}  
           onChange={(e) => setCurrentQuery(e.target.value)}
           onKeyDown={handleEnter}
           placeholder="Type destination like 'Goa 3 days plan'"
@@ -90,7 +84,7 @@ export default function SearchBar({
         </button>
       </div>
 
-      {/* RECENT SEARCHES */}
+      {}
       {recentSearches.length > 0 && (
         <div className="mt-4 text-gray-600">
           <p className="mb-2 font-medium">Recent searches:</p>

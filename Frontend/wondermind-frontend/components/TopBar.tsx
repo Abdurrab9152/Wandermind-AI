@@ -5,12 +5,12 @@ export default function TopBar() {
   return (
     <header className="backdrop-blur-lg bg-white/10 text-white py-4 shadow-md sticky top-0 z-50 border-b border-white/20">
       <div className="container mx-auto flex justify-between items-center px-6">
-        {/* Logo */}
+        {}
         <h2 className="text-2xl font-extrabold tracking-wide cursor-pointer hover:text-yellow-300 transition-colors duration-300">
           TravelPlanner
         </h2>
 
-        {/* Navigation */}
+        {}
         <nav className="flex gap-8 text-lg font-medium">
           <Link
             href="/"

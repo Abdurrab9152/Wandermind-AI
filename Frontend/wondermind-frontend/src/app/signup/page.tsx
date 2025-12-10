@@ -21,7 +21,6 @@ const SignupPage: React.FC = () => {
   const router = useRouter();
 
   useEffect(() => {
-    // Generate random positions for dots after mount
     const generatedDots: Dot[] = Array.from({ length: 10 }, () => ({
       top: Math.random() * 100,
       left: Math.random() * 100,
@@ -53,7 +52,7 @@ const SignupPage: React.FC = () => {
     <div className="min-h-screen flex flex-col relative overflow-hidden">
       <TopBar />
 
-      {/* Animated Gradient Background */}
+      {}
       <motion.div
         className="absolute inset-0 -z-10"
         animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
@@ -64,7 +63,7 @@ const SignupPage: React.FC = () => {
         }}
       />
 
-      {/* Floating Dots */}
+      {}
       <motion.div
         className="absolute w-full h-full"
         animate={{ rotate: 360 }}
@@ -82,7 +81,7 @@ const SignupPage: React.FC = () => {
         ))}
       </motion.div>
 
-      {/* Signup Form */}
+      {}
       <div className="flex flex-1 items-center justify-center px-4 z-10 relative">
         <div className="bg-white rounded-3xl shadow-2xl p-10 max-w-md w-full animate-fadeInUp">
           <h2 className="text-3xl font-bold text-pink-600 mb-6 text-center animate-fadeInUp">

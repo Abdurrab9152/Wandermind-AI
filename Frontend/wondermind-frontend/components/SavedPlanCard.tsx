@@ -8,30 +8,29 @@ interface SavedPlan {
 
 interface Props {
   plan: SavedPlan;
-  onDelete?: () => void; // optional delete callback
+  onDelete?: () => void; 
 }
 
 const emojis = ["🗺️", "✈️", "🏖️", "🍲", "🏨", "🏛️"];
 
 export default function SavedPlanCard({ plan, onDelete }: Props) {
-  // Pick a random emoji for the card
   const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
 
   return (
     <div className="bg-white rounded-2xl shadow-lg p-6 relative overflow-hidden hover:shadow-2xl transform hover:-translate-y-2 transition-all animate-fadeIn">
       
-      {/* Emoji Badge */}
+      {}
       <div className="absolute top-4 right-4 text-3xl animate-float">{randomEmoji}</div>
 
-      {/* Card Content */}
+      {}
       <h3 className="text-xl font-bold text-indigo-700 mb-2">{plan.title}</h3>
       
-      {/* Quick preview */}
+      {}
       <p className="text-gray-700 whitespace-pre-line line-clamp-4 mb-4">
         {plan.details}
       </p>
 
-      {/* Buttons */}
+      {}
       <div className="flex gap-2">
         <button className="px-3 py-1 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition-colors">
           View

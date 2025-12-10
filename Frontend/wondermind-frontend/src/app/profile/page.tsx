@@ -53,7 +53,7 @@ const ProfilePage: React.FC = () => {
     <div className="min-h-screen flex flex-col relative overflow-x-hidden">
       <TopBar />
 
-      {/* Animated Gradient Background */}
+      {}
       <motion.div
         className="absolute inset-0 -z-10"
         animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
@@ -64,7 +64,7 @@ const ProfilePage: React.FC = () => {
         }}
       />
 
-      {/* Floating Particles */}
+      {}
       {mounted && (
         <motion.div
           className="absolute w-full h-full -z-10"
